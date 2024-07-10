@@ -1,30 +1,56 @@
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
 Language: Cpp
-Standard: Cpp11
+Standard: c++11
 BasedOnStyle: LLVM
 
+# 缩进长度
 IndentWidth: 4
 TabWidth: 4
 UseTab: Never
 
+# 访问修饰符的额外缩进
+AccessModifierOffset: -4
+
 # 最大列宽
 ColumnLimit: 120
 
-DerivePointerAlignment: false
-# 指针和引用左对齐
+# 指针（*）和引用（&）对齐样式
+# [Left, Middle, Right]
 PointerAlignment: Left
 
-# 访问限定符缩进
-AccessModifierOffset: -4
-
-AllowShortBlocksOnASingleLine: true
-# switch中短case一行表示
+# 是否允许 switch 语句中短 case 语句同处一行
+AllowShortCaseExpressionOnASingleLine: true
 AllowShortCaseLabelsOnASingleLine: true
-# 短函数一行表示
-AllowShortFunctionsOnASingleLine: false
-# 短if一行表示
-AllowShortIfStatementsOnASingleLine: true
-# 短循环一行表示
+
+# 是否允许短函数的函数体与函数名同处一行
+# [None, InlineOnly, Empty, Inline, All]
+AllowShortFunctionsOnASingleLine: Empty
+
+# 是否允许短 lambda 函数同处一行
+# [None, Empty, Inline, All]
+AllowShortLambdasOnASingleLine: Empty
+
+# 是否允许短 if/else 语句同处一行
+# [Never, WithoutElse, OnlyFirstIf, AllIfsAndElse]
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+
+# 是否允许短循环语句同处一行
 AllowShortLoopsOnASingleLine: true
 
-# 头文件排序
-SortIncludes: true
+# 是否允许短 while 代码块同处一行
+# [Never, Empty, Always]
+AllowShortBlocksOnASingleLine: Empty
+
+# 是否允许短枚举类同处一行
+AllowShortEnumsOnASingleLine: false
+
+# 是否排序头文件
+# [Never, CaseSensitive, CaseInsensitive]
+SortIncludes: CaseSensitive
+
+# 行末注释对齐方式
+# [Leave, Always, Never]
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 1
