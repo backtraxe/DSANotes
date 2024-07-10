@@ -53,3 +53,7 @@ SortIncludes: CaseSensitive
 AlignTrailingComments:
   Kind: Always
   OverEmptyLines: 1
+
+# 模板参数定义后换行
+# [Leave, No, MultiLine, Yes]
+AlwaysBreakTemplateDeclarations: Yes
