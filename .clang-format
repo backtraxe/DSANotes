@@ -20,7 +20,6 @@ ColumnLimit: 120
 PointerAlignment: Left
 
 # 是否允许 switch 语句中短 case 语句同处一行
-AllowShortCaseExpressionOnASingleLine: true
 AllowShortCaseLabelsOnASingleLine: true
 
 # 是否允许短函数的函数体与函数名同处一行
